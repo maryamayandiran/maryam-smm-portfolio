@@ -887,14 +887,18 @@ section {
 
     .navbar-container {
         flex-direction: column;
-        gap: var(--spacing-md);
+        gap: 10px;
     }
 
     .nav-list {
-        flex-direction: column;
-        gap: var(--spacing-sm);
+        flex-direction: flex;
+        gap: 15px;
         text-align: center;
         width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 5px;
+        white-space: nowrap;
     }
 
     .nav-link {
