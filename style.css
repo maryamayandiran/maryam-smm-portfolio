@@ -122,9 +122,6 @@ html {
     scroll-behavior: smooth;
 }
 
-h1, h2, h3, p, li,{
-    color: #000000;
-}
 
 body {
     font-family: var(--font-primary);
@@ -798,7 +795,7 @@ section {
 
 .result-label {
     font-size: 0.95rem;
-    color: var(--gray-light);
+    color: var(--gray-medium);
     text-align: center;
 }
 
