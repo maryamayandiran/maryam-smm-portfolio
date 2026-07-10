@@ -7,290 +7,212 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="navbar">
-        <div class="navbar-container">
-            <div class="logo">
-                <h1 class="fade-in">Ayandiran Maryam</h1>
+    <div class="page-wrapper">
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Ayandiran Maryam</div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+        <label for="nav-toggle" class="menu-toggle" aria-label="Toggle navigation" role="button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#cases">Case Studies</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero-section">
+        <div class="hero-container">
+            <img src="pictures/my picture.jpeg" alt="Portrait of Ayandiran Maryam" class="hero-img">
+            <h1>Hi, I'm Maryam</h1>
+            <p class="tagline">I help brands and creators turn QUIET pages into pages people NOTICE</p>
+            <div class="hero-buttons">
+                <a href="#cases" class="btn btn-pill">View My Work</a>
+                <a href="pictures/my social media manager CV (1).pdf" target="_blank" class="btn btn-pill btn-outline">View My CV</a>
             </div>
-            <nav class="nav-menu">
-                <ul class="nav-list">
-                    <li class="nav-item fade-in" style="--delay: 0.1s;"><a href="#about" class="nav-link">About</a></li>
-                    <li class="nav-item fade-in" style="--delay: 0.15s;"><a href="#skills" class="nav-link">Skills</a></li>
-                    <li class="nav-item fade-in" style="--delay: 0.2s;"><a href="#services" class="nav-link">Services</a></li>
-                    <li class="nav-item fade-in" style="--delay: 0.25s;"><a href="#certificate" class="nav-link">Certificate</a></li>
-                    <li class="nav-item fade-in" style="--delay: 0.3s;"><a href="#tools" class="nav-link">Tools</a></li>
-                    <li class="nav-item fade-in" style="--delay: 0.35s;"><a href="#projects" class="nav-link">Projects</a></li>
-                    <li class="nav-item fade-in" style="--delay: 0.4s;"><a href="#case-study" class="nav-link">Case Studies</a></li>
-                    <li class="nav-item fade-in" style="--delay: 0.45s;"><a href="#contact" class="nav-link cta-btn">Contacts</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero" id="hero">
-            <div class="hero-container">
-                <div class="hero-content fade-in-up">
-                    <h1 class="hero-title">Hi, I'm Maryam</h1>
-                    <p class="hero-subtitle fade-in-up" style="--delay: 0.2s;">
-                        I help brands and creators turn <span class="highlight">QUIET</span> pages into pages people <span class="highlight">NOTICE</span>
-                    </p>
-                    <div class="hero-cta fade-in-up" style="--delay: 0.4s;">
-                        <a href="#contact" class="btn btn-primary">View my work</a>
-                        <a href="pictures/my social media manager CV (1).pdf" class="btn btn-secondary">View my CV</a>
-                    </div>
-                </div>
-                <div class="hero-image fade-in-up" style="--delay: 0.3s;">
-                    <img src="pictures/my picture.jpeg" alt="Ayandiran Maryam" class="profile-img">
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section class="about" id="about">
-            <div class="container">
-                <div class="section-header fade-in-up">
-                    <h2 class="section-title">About Me</h2>
-                    <div class="title-underline"></div>
-                </div>
-                <p class="about-text fade-in-up" style="--delay: 0.2s;">
-                    I'm Ayandiran Maryam, a Social Media Manager helping brands and creators increase visibility, engagement and followers through strategic content and consistent online presence.
-
-                    As a student with a strong interest in marketing and creativity, I bring curiosity, attention to detail, and a problem-solving mindset to every project. I don't just post content, I focus on creating content that connects with audiences, encourages engagement and supports business goals.
-
-                    I'm reliable, easy to work with and committed to helping brands grow online.
-                </p>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section class="skills" id="skills">
-            <div class="container">
-                <div class="section-header fade-in-up">
-                    <h2 class="section-title">My Expertise</h2>
-                    <div class="title-underline"></div>
-                </div>
-                <div class="skills-grid">
-                    <div class="skill-card fade-in-up" style="--delay: 0.1s;">
-                        <h3 class="skill-category">Soft Skills</h3>
-                        <ul class="skill-list">
-                            <li class="skill-item">Consistency</li>
-                            <li class="skill-item">Communication</li>
-                            <li class="skill-item">Creativity</li>
-                            <li class="skill-item">Attention to Details</li>
-                            <li class="skill-item">Time Management</li>
-                            <li class="skill-item">Adaptability</li>
-                        </ul>
-                    </div>
-                    <div class="skill-card fade-in-up" style="--delay: 0.2s;">
-                        <h3 class="skill-category">Hard Skills</h3>
-                        <ul class="skill-list">
-                            <li class="skill-item">Social Media Management</li>
-                            <li class="skill-item">Community Management</li>
-                            <li class="skill-item">Copywriting & Caption Writing</li>
-                            <li class="skill-item">Content Planning</li>
-                            <li class="skill-item">Analytics Tracking</li>
-                            <li class="skill-item">Meta Business Suite</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section class="services" id="services">
-            <div class="container">
-                <div class="section-header fade-in-up">
-                    <h2 class="section-title">Services I Offer</h2>
-                    <div class="title-underline"></div>
-                </div>
-                <div class="services-grid">
-                    <div class="service-card fade-in-up" style="--delay: 0.1s;">
-                        <div class="service-icon"></div>
-                        <h3>Social Media Management</h3>
-                        <p>
-                            I help brands and creators stay consistent and intentional online managing pages, scheduling posts and keeping your presence active and engaging.
-                        </p>
-                    </div>
-                    <div class="service-card fade-in-up" style="--delay: 0.2s;">
-                        <div class="service-icon"></div>
-                        <h3>Community Management</h3>
-                        <p>
-                            I build and nurture real connections with your audience, respond to comments and messages and create a sense of community around your brand or page.
-                        </p>
-                    </div>
-                    <div class="service-card fade-in-up" style="--delay: 0.3s;">
-                        <div class="service-icon"></div>
-                        <h3>Content Creation</h3>
-                        <p>
-                            From visuals to captions, I create content that reflects your brand's or personal voice, tells your story and connects with your audience.</p>
-                    </div>
-                    <div class="service-card fade-in-up" style="--delay: 0.5s;">
-                        <div class="service-icon"></div>
-                        <h3>Content Planning</h3>
-                        <p>
-                            I organize and plan your content ahead of time, ensuring every post aligns with your goals and maintains a clear, cohesive identity.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Certificate Section -->
-        <section class="certificate" id="certificate">
-            <div class="container">
-                <div class="section-header fade-in-up">
-                    <h2 class="section-title">Professional Credentials</h2>
-                    <div class="title-underline"></div>
-                </div>
-                <div class="certificate-image fade-in-up" style="--delay: 0.2s;">
-                    <img src="pictures/certificate.jpeg" alt="Professional Certificate">
-                </div>
-            </div>
-        </section>
-
-        <!-- Tools Section -->
-        <section class="tools" id="tools">
-            <div class="container">
-                <div class="section-header fade-in-up">
-                    <h2 class="section-title">Tools I Use</h2>
-                    <div class="title-underline"></div>
-                </div>
-                <div class="tools-grid">
-                    <div class="tool-badge fade-in-up" style="--delay: 0.1s;">
-                        <span>Google Sheets</span>
-                    </div>
-                    <div class="tool-badge fade-in-up" style="--delay: 0.15s;">
-                        <span>Buffer</span>
-                    </div>
-                    <div class="tool-badge fade-in-up" style="--delay: 0.2s;">
-                        <span>Google Docs</span>
-                    </div>
-                    <div class="tool-badge fade-in-up" style="--delay: 0.25s;">
-                        <span>Meta Business Suite</span>
-                    </div>
-                    <div class="tool-badge fade-in-up" style="--delay: 0.3s;">
-                        <span>Canva</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section class="projects" id="projects">
-            <div class="container">
-                <div class="section-header fade-in-up">
-                    <h2 class="section-title">Project</h2>
-                    <div class="title-underline"></div>
-                </div>
-                <div class="project-card fade-in-up" style="--delay: 0.2s;">
-                    <div class="project-content">
-                        <h3>Social Media Content Plan - Aura Fashion Brand</h3>
-                        <p class="project-subtitle">(Mock Project)</p>
-                        <p>I created a comprehensive 30-day content calendar for a fictional fashion brand to demonstrate expertise in social media management. This project includes:</p>
-                        <ul class="project-features">
-                            <li>Content planning and strategy</li>
-                            <li>Content pillars and themes</li>
-                            <li>Posting schedules optimized for engagement</li>
-                            <li>Campaign goals and KPIs</li>
-                            <li>Content ideas for Instagram, TikTok, Pinterest, and Facebook</li>
-                        </ul>
-                    </div>
-                    <div class="project-preview">
-                        <iframe 
-                          title="Live Content Pipeline Matrix"
-                          src="https://docs.google.com/spreadsheets/d/15ePA2d5cx5qGQbO0tcwqWfU-T6ngsO6v/edit?usp=sharing&ouid=100597733899057602218&rtpof=true&sd=true" 
-                          class="google-sheet"
-                          loading="lazy"
-                          allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Case Study Section -->
-        <section class="case-study" id="case-study">
-            <div class="container">
-                <div class="section-header fade-in-up">
-                    <h2 class="section-title">Case Studies</h2>
-                    <div class="title-underline"></div>
-                </div>
-                
-                <div class="case-study-card fade-in-up" style="--delay: 0.1s;">
-                    <div class="case-study-header">
-                        <h3>Case Study 1</h3>
-                        
-                    </div>
-                    <p class="case-study-subtitle">Facebook (Personal Brand)</p>
-                    <p class="case-study-description">
-                        I create and manage content focused on relatable and engaging posts. I write captions, design content and interact with my audience to build engagement and consistency.
-                    </p>
-                    <div class="case-study-results">
-                        <div class="result-item">
-                            <span class="result-number">0 → 100+</span>
-                            <span class="result-label">Followers in 2 weeks</span>
-                        </div>
-                        <div class="result-item">
-                            <span class="result-number">400 → 11K+</span>
-                            <span class="result-label">Views in 3 weeks</span>
-                        </div>
-                    </div>
-                    <div class="case-study-images">
-                        <img src="pictures/facebook 1.jpeg" alt="Facebook insights" class="case-study-img">
-                        <img src="pictures/facebook 2.jpeg" alt="Facebook insights" class="case-study-img">
-                    </div>
-                </div>
-
-                <div class="case-study-card fade-in-up" style="--delay: 0.2s;">
-                    <div class="case-study-header">
-                        <h3>Case Study 2</h3>
-                    </div>
-                    <p class="case-study-subtitle">LinkedIn (Personal Brand)</p>
-                    <p class="case-study-description">
-                        I create and share content focused on growth, visibility and professional storytelling. I focus on writing engaging posts and building meaningful interactions.
-                    </p>
-                    <div class="case-study-results">
-                        <div class="result-item">
-                            <span class="result-number">306 → 1,800+</span>
-                            <span class="result-label">Impressions in 5 days</span>
-                        </div>
-                    </div>
-                    <div class="case-study-images">
-                        <img src="pictures/linkedin 1.jpeg" alt="LinkedIn insights" class="case-study-img">
-                        <img src="pictures/linkedin 2.jpeg" alt="LinkedIn insights" class="case-study-img">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="contact" id="contact">
-            <div class="container">
-                <div class="section-header fade-in-up">
-                    <h2 class="section-title">Let's grow your online presence</h2>
-                    <div class="title-underline"></div>
-                </div>
-                <p class="contact-text fade-in-up" style="--delay: 0.2s;">
-                    Ready to build your online presence and turn your followers into a community? Let's talk about your next project.
-                </p>
-                <div class="contact-buttons fade-in-up" style="--delay: 0.3s;">
-                    <a href="mailto:ayandiranmaryam5@gmail.com" class="btn btn-primary">Send Email</a>
-                    <a href="https://www.linkedin.com/in/ayandiran-maryam-56062235a" class="btn btn-secondary" target="_blank">LinkedIn</a>
-                    <a href="https://x.com/maryamonsocials?s=21" class="btn btn-secondary" target="_blank">Twitter/X</a>
-                    <a href="https://wa.me/2347054406708" class="btn btn-secondary" target="_blank">WhatsApp</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- About Me Section -->
+    <section id="about" class="section">
         <div class="container">
-            <p>&copy; 2026 Ayandiran Maryam. All rights reserved.</p>
-            <p class="footer-tagline">Turning quiet pages into pages people notice, one post at a time.</p>
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>I'm Ayandiran Maryam, a Social Media Manager and a content strategist helping brands and creators increase visibility, engagement and followers through consistent content. 
+                   I'm also a student with a strong interest in marketing and creativity and I bring that into every project I work on.
+                   I approach my work with consistency, curiosity and a problem-solving mindset. 
+                   Every brand has a story and I love creating creating content that helps people notice and remember it.</p>
+            </div>
+        </div>
+    </section>
+
+    <!---skills section-->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-wrapper">
+                <div class="skills-blocks">
+                    <h3>Soft Skills</h3>
+                    <ul class="skills-list">
+                        <li>Time Management</li>
+                        <li>Attention To Detials</li>
+                        <li>Communication</li>
+                        <li>Consistency</li>
+                        <li>Creativity</li>
+                        <li>Adaptability</li>
+                    </ul>
+                </div>
+                <div class="skills-blocks">
+                    <h3>Hard Skills</h3>
+                    <ul class="skills-list">
+                        <li>Social Media Management</li>
+                        <li>Copywriting & Caption Writing</li>
+                        <li>Commuinity Management</li>
+                        <li>Content Planning</li>
+                        <li>Analytics Tracking</li>
+                        <li>Graphics Design (Canva)</li>
+                        <li>Social Media Scheduling</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title">Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Social Media Management</h3>
+                    <p>I help brands stay consistent online by managing their social media accounts, scheduling content and keeping their online presence active and engaging.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Content Strategy</h3>
+                    <p>I create content strategies based on your goals, audience and brand identity to ensure every post has a clear purpose.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Content Creation</h3>
+                    <p>I create graphics and captions that reflect your brand's voice and connect with your audience.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Content Planning</h3>
+                    <p>I plan content that keeps your brand organized, consistent and aligned with your goals.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Community Management</h3>
+                    <p>I help brands and creators build stronger relationships with their audience through active engagement and meaningful conversations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="section">
+        <div class="container">
+            <h2 class="section-title">Tools I Use</h2>
+            <div class="tools-grid">
+                <div class="tool-circle" title="Notion">Google Sheets</div>
+                <div class="tool-circle" title="Canva">Buffer</div>
+                <div class="tool-circle" title="CapCut">Meta Business Suite</div>
+                <div class="tool-circle" title="Buffer">Google Docs</div>
+                <div class="tool-circle" title="Meta Business Suite">Canva</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section id="cases" class="section">
+        <div class="container">
+            <h2 class="section-title">Case Studies</h2>
+            
+            <!-- Case Study 1 -->
+            <div class="case-study">
+                <h3>Facebook (Personal Brand)</h3>
+                <p class="case-text">I create and manage content focused on relatable and engaging posts. I write captions, design content, and interact with my audience to build engagement and consistency.
+                                     I grew the page from 0 to 100+ followers within 2 weeks and increased views from 400 to 11,000+ in 3 weeks.</p>
+                <div class="case-images">
+                    <div class="img-box">
+                        <span class="label">Before</span>
+                        <img src="pictures/facebook 1.jpeg" alt="Skincare Account Metrics Before">
+                    </div>
+                    <div class="img-box">
+                        <span class="label">After</span>
+                        <img src="pictures/facebook 2.jpeg" alt="Skincare Account Metrics After">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 2 -->
+            <div class="case-study">
+                <h3>LinkedIn (Personal Brand)</h3>
+                <p class="case-text">I create and share content focused on growth, visibility and professional storytelling. I focus on writing engaging posts and building meaningful interactions. 
+                    I increased post impressions from 306 to 1,800+ within 5 days</p>
+                <div class="case-images">
+                    <div class="img-box">
+                        <span class="label">Before</span>
+                        <img src="pictures/linkedin 1.jpeg" alt="SaaS Metrics Before">
+                    </div>
+                    <div class="img-box">
+                        <span class="label">After</span>
+                        <img src="pictures/linkedin 2.jpeg" alt="SaaS Metrics After">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!---contact me section--->
+    <section id="contact" class="contact-section">
+        <div class="section-container">
+            <h2 class="section-title">Let's Work Together</h2>
+            <p class="contact-text">Have a project in mind or need help growing your brand? Let’s talk.</p>
+            <form class="whatsapp-form" onsubmit="window.open('https://wa.me/2347054406708?text=' + encodeURIComponent('Name: ' + this.name.value + '\n\nMessage: ' + this.message.value), '_blank'); return false;">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Maryam">
+                </div>
+                <div class="form-group">
+                    <label for="message">How can I help your brand?</label>
+                    <textarea id="message" name="message" rows="4" placeholder="How can i help your brand?"></textarea>
+                </div>
+                <button type="submit" class="btn btn-black">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!---footer & social footer grid--->
+    <div class="social-links">
+        <a href="https://x.com/maryamonsocials?s=21" aria-label="Twitter" class="social-icon" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="https://x.com/maryamonsocials?s=21" aria-hidden="true">
+                <path d="M22 5.92c-.64.28-1.32.48-2.04.56.73-.44 1.28-1.14 1.54-1.98-.68.4-1.44.7-2.24.86C18.7 4.64 17.78 4 16.72 4c-1.48 0-2.68 1.2-2.68 2.68 0 .21.02.42.07.62C11.5 7.24 9 5.9 7.28 4c-.23.4-.36.86-.36 1.36 0 .94.48 1.78 1.22 2.26-.56-.02-1.1-.17-1.56-.43v.04c0 1.3.92 2.38 2.14 2.62-.22.06-.46.09-.7.09-.17 0-.34-.02-.5-.05.34 1.06 1.32 1.84 2.48 1.86C9.06 15.1 7.6 15.7 6 15.7c-.36 0-.7-.02-1.04-.06 1.06.68 2.3 1.08 3.64 1.08 4.36 0 6.76-3.62 6.76-6.76v-.31c.46-.36.86-.8 1.18-1.3-.42.18-.86.28-1.32.34.48-.3.86-.72 1.06-1.24z"/>
+            </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/ayandiran-maryam-56062235a" aria-label="LinkedIn" class="social-icon" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="https://www.linkedin.com/in/ayandiran-maryam-56062235a" aria-hidden="true">
+                <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.28 8.5h4.4V24H.28zM8.5 8.5h4.22v2.07h.06c.59-1.12 2.04-2.3 4.2-2.3 4.5 0 5.33 2.96 5.33 6.81V24h-4.4v-7.32c0-1.75-.03-4-2.44-4-2.44 0-2.82 1.9-2.82 3.86V24H8.5V8.5z"/>
+            </svg>
+        </a>
+        <a href="mailto:ayandiranmaryam5@gmail.com" aria-label="Email" class="social-icon">
+            <svg viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8l8 5 8-5v10H4z"/>
+            </svg>
+        </a>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <p>&copy; Ayandiran Maryam 2026</p>
         </div>
     </footer>
+    </div>
 </body>
 </html>
+    
