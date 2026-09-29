@@ -295,10 +295,15 @@ a {
 
 .about-box p {
     font-size: 1rem;
-    line-height: 1.8;
+    line-height: 1.9;
     color: #111111;
     font-weight: 500;
     margin: 0;
+}
+
+.about-box p + p,
+.why-choose-box p + p {
+    margin-top: 1rem;
 }
 
 /* ==========================================================================
@@ -632,7 +637,7 @@ a {
 
 .why-choose-box p {
     font-size: 1rem;
-    line-height: 1.8;
+    line-height: 1.9;
     color: #111111;
     font-weight: 500;
     margin: 0;
