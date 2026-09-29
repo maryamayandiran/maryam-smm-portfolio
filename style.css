@@ -6,14 +6,15 @@
 
 html {
     scroll-behavior: smooth;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #ffffff;
-    color: #000000;
+    font-family: "Georgia", "Times New Roman", serif;
+    background-color: #f7f3ee;
+    color: #111111;
 }
 
 body {
     line-height: 1.6;
-    background-color: #ffffff;
+    background: linear-gradient(180deg, #f9f5f1 0%, #f4efe9 100%);
+    color: #111111;
 }
 
 a {
@@ -41,17 +42,24 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 25px 5%;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(249, 245, 241, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid #111111;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.15);
+    font-family: "Georgia", "Times New Roman", serif;
+    box-shadow: 0 10px 30px rgba(17,17,17,0.02);
 }
 
 .logo {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-weight: 700;
-    letter-spacing: -0.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #111111;
+    font-family: "Georgia", "Times New Roman", serif;
 }
 
 .nav-links {
@@ -80,8 +88,12 @@ a {
 }
 
 .nav-links a {
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #111111;
+    font-family: "Georgia", "Times New Roman", serif;
 }
 
 .nav-links a:hover {
@@ -92,8 +104,46 @@ a {
    Layout Structures & Resets (Strictly Vertical Stack)
    ========================================================================== */
 .section {
-    padding: 100px 5%;
-    border-bottom: 1px solid #e5e5e5;
+    padding: 110px 5%;
+    border-bottom: 1px solid #e8e8e3;
+}
+
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translate3d(0, 42px, 0) scale(0.985);
+    filter: blur(2px);
+    transition: opacity 0.9s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.9s ease;
+    will-change: opacity, transform, filter;
+}
+
+.reveal-on-scroll.visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0);
+}
+
+.reveal-on-scroll .about-box,
+.reveal-on-scroll .why-choose-box,
+.reveal-on-scroll .skills-blocks,
+.reveal-on-scroll .service-card,
+.reveal-on-scroll .case-study-card,
+.reveal-on-scroll .whatsapp-form,
+.reveal-on-scroll .tool-circle {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0) scale(0.985);
+    transition: opacity 0.9s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.9s ease, border-color 0.9s ease;
+}
+
+.reveal-on-scroll.visible .about-box,
+.reveal-on-scroll.visible .why-choose-box,
+.reveal-on-scroll.visible .skills-blocks,
+.reveal-on-scroll.visible .service-card,
+.reveal-on-scroll.visible .case-study-card,
+.reveal-on-scroll.visible .whatsapp-form,
+.reveal-on-scroll.visible .tool-circle {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    box-shadow: 0 18px 40px rgba(17, 17, 17, 0.04);
 }
 
 .container {
@@ -104,9 +154,11 @@ a {
 .section-title {
     font-size: 1.8rem;
     font-weight: 700;
-    letter-spacing: -0.5px;
+    letter-spacing: 0.16em;
     margin-bottom: 40px;
     text-transform: uppercase;
+    color: #111111;
+    font-family: "Georgia", "Times New Roman", serif;
 }
 
 .contact-section .section-container {
@@ -151,10 +203,11 @@ a {
 }
 
 .hero-section h1 {
-    font-size: 2.8rem;
+    font-size: 3.1rem;
     font-weight: 800;
     letter-spacing: -1px;
     margin-bottom: 10px;
+    font-family: "Georgia", "Times New Roman", serif;
 }
 
 .subtitle {
@@ -165,10 +218,12 @@ a {
 }
 
 .tagline {
-    font-size: 1.05rem;
-    color: #333333;
+    font-size: 1.08rem;
+    color: #2e2e2a;
     margin-bottom: 40px;
     line-height: 1.7;
+    letter-spacing: 0.02em;
+    font-family: "Georgia", "Times New Roman", serif;
 }
 
 /* Pill Form Buttons */
@@ -183,13 +238,16 @@ a {
     align-items: center;
     justify-content: center;
     padding: 14px 28px;
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
     cursor: pointer;
-    background-color: #000000;
-    color: #ffffff;
-    border: 1px solid #000000;
+    background-color: #111111;
+    color: #f8f3ee;
+    border: 1px solid #111111;
     border-radius: 999px;
+    font-family: "Georgia", "Times New Roman", serif;
 }
 
 .btn-pill {
@@ -214,10 +272,33 @@ a {
 /* ==========================================================================
    About Section
    ========================================================================== */
-.about-content p {
-    font-size: 1.1rem;
+.about-box {
+    background: linear-gradient(180deg, #fffdfb 0%, #f3efe9 100%);
+    border: 1px solid rgba(17, 17, 17, 0.12);
+    border-radius: 24px;
+    padding: 30px 32px;
+    box-shadow: 0 18px 40px rgba(17, 17, 17, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.about-box:hover,
+.why-choose-box:hover,
+.skills-blocks:hover,
+.service-card:hover,
+.case-study-card:hover,
+.whatsapp-form:hover,
+.tool-circle:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 50px rgba(17, 17, 17, 0.08);
+    border-color: #d0d0d0;
+}
+
+.about-box p {
+    font-size: 1rem;
     line-height: 1.8;
-    color: #222222;
+    color: #111111;
+    font-weight: 500;
+    margin: 0;
 }
 
 /* ==========================================================================
@@ -240,6 +321,9 @@ a {
 .skills-blocks h3 {
     margin-bottom: 16px;
     font-size: 1.1rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    color: #111111;
 }
 
 .skills-list {
@@ -250,7 +334,9 @@ a {
 
 .skills-list li {
     margin-bottom: 10px;
-    color: #333333;
+    color: #111111;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 500;
 }
 
 /* ==========================================================================
@@ -304,11 +390,12 @@ a {
     background-color: #ffffff;
     text-transform: uppercase;
     cursor: default;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.25s ease, box-shadow 0.25s ease;
     padding: 8px;
     text-align: center;
     white-space: normal;
     line-height: 1.1;
+    box-shadow: 0 12px 22px rgba(17,17,17,0.04);
 }
 
 .tool-circle:hover {
@@ -316,69 +403,283 @@ a {
     color: #ffffff;
 }
 
-/* ==========================================================================
-   Case Studies Section (Text First Layout)
-   ========================================================================== */
-.case-study {
-    margin-bottom: 80px;
+.portfolio-case-studies {
+    --case-bg: #fafafa;
+    --case-inner: #f2f2f2;
+    --case-border: #e0e0e0;
+    --case-text: #111111;
+    --case-muted: #6b6b6b;
+    --case-shadow: 0 18px 40px rgba(17, 17, 17, 0.04);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-.case-study:last-child {
-    margin-bottom: 0;
+.portfolio-case-studies .case-study-card {
+    background: linear-gradient(180deg, #fffdfb 0%, #f3efe9 100%);
+    border: 1px solid rgba(17, 17, 17, 0.12);
+    border-radius: 24px;
+    padding: 28px;
+    box-shadow: 0 18px 40px rgba(17, 17, 17, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-.case-study h3 {
-    font-size: 1.3rem;
+.portfolio-case-studies .case-study-card + .case-study-card {
+    margin-top: 26px;
+}
+
+.portfolio-case-studies .case-study-header {
+    margin-bottom: 20px;
+}
+
+.portfolio-case-studies .case-study-kicker {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #111111;
+    margin-bottom: 10px;
+}
+
+.portfolio-case-studies .case-study-heading {
+    margin: 0;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    line-height: 1.25;
     font-weight: 700;
-    margin-bottom: 15px;
+    letter-spacing: -0.04em;
+    color: var(--case-text);
 }
 
-.case-text {
-    font-size: 1rem;
-    color: #333333;
-    margin-bottom: 30px;
-    line-height: 1.7;
-}
-
-.case-images {
+.portfolio-case-studies .case-study-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
+    margin-bottom: 20px;
+    align-items: stretch;
 }
 
-.img-box {
-    position: relative;
-    max-height: 260px;
-    overflow: hidden;
-    border-radius: 8px;
-    background-color: #f9f9f9;
+.portfolio-case-studies .case-panel,
+.portfolio-case-studies .case-results {
+    background: var(--case-inner);
+    border: 1px solid var(--case-border);
+    border-radius: 16px;
+    padding: 18px 18px 16px;
+    color: #111111;
+}
+
+.portfolio-case-studies .case-panel {
+    min-height: 170px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.portfolio-case-studies .case-panel-full {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.portfolio-case-studies .panel-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #111111;
+}
+
+.portfolio-case-studies .case-panel p,
+.portfolio-case-studies .case-results p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #111111;
+    font-weight: 500;
+}
+
+.portfolio-case-studies .case-panel p + p,
+.portfolio-case-studies .case-results p + p {
+    margin-top: 12px;
+}
+
+.portfolio-case-studies .case-step-list,
+.portfolio-case-studies .case-results-list {
+    margin: 0;
+    padding-left: 1.5rem;
+    color: #111111;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    font-weight: 500;
+}
+
+.portfolio-case-studies .case-step-list li,
+.portfolio-case-studies .case-results-list li {
+    padding-left: 0.2rem;
+}
+
+.portfolio-case-studies .case-step-list li + li,
+.portfolio-case-studies .case-results-list li + li {
+    margin-top: 10px;
+}
+
+.portfolio-case-studies .case-step-list strong {
+    display: block;
+    margin-bottom: 3px;
+}
+
+.portfolio-case-studies .case-step-list p {
+    margin: 0;
+}
+
+.portfolio-case-studies .case-results-list {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.portfolio-case-studies .case-results {
+    margin-bottom: 22px;
+    min-height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.portfolio-case-studies .case-screen-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.portfolio-case-studies .case-screen-set {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.portfolio-case-studies .case-screen-label {
+    width: 100%;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #111111;
+    text-align: center;
+}
+
+.portfolio-case-studies .case-screen-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.portfolio-case-studies .case-visual-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.portfolio-case-studies .case-visual-tag {
+    width: 100%;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #111111;
+    text-align: center;
+}
+
+.portfolio-case-studies .case-image-slot {
+    aspect-ratio: 4 / 3;
+    min-height: 220px;
+    width: 100%;
+    border: 1px solid var(--case-border);
+    border-radius: 16px;
+    background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    padding: 8px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--case-muted);
+    line-height: 1.5;
+    overflow: hidden;
 }
 
-.img-box img {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
+.portfolio-case-studies .case-image-slot img {
+    width: 100%;
+    height: 100%;
     object-fit: contain;
     display: block;
-    border: none;
+    border-radius: 12px;
+    background: #ffffff;
 }
 
-.label {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    background-color: #000000;
-    color: #ffffff;
-    padding: 4px 10px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    z-index: 10;
+.why-choose-section {
+    padding-top: 100px;
+}
+
+.why-choose-box {
+    background: linear-gradient(180deg, #fffdfb 0%, #f3efe9 100%);
+    border: 1px solid rgba(17, 17, 17, 0.12);
+    border-radius: 24px;
+    padding: 30px 32px;
+    box-shadow: 0 18px 40px rgba(17, 17, 17, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.why-choose-box p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #111111;
+    font-weight: 500;
+    margin: 0;
+}
+
+.skills-wrapper,
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.skills-blocks,
+.service-card {
+    background: linear-gradient(180deg, #fffdfb 0%, #f3efe9 100%);
+    border: 1px solid rgba(17, 17, 17, 0.12);
+    border-radius: 24px;
+    padding: 28px;
+    box-shadow: 0 18px 40px rgba(17, 17, 17, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.skills-blocks h3,
+.service-card h3 {
+    margin-bottom: 16px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: #111111;
+}
+
+.skills-list li,
+.service-card p {
+    color: #111111;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    font-weight: 500;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    margin-bottom: 10px;
 }
 
 /* ==========================================================================
@@ -386,20 +687,23 @@ a {
    ========================================================================== */
 .contact-text {
     font-size: 1rem;
-    color: #444444;
+    color: #111111;
     margin: 0 auto 24px;
     max-width: 600px;
     line-height: 1.7;
     text-align: center;
+    font-weight: 500;
 }
 
 .whatsapp-form {
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
+    background: linear-gradient(180deg, #fffdfb 0%, #f3efe9 100%);
+    border: 1px solid rgba(17, 17, 17, 0.12);
     padding: 40px;
     max-width: 600px;
     margin: 0 auto 50px;
-    border-radius: 8px;
+    border-radius: 24px;
+    box-shadow: 0 18px 40px rgba(17, 17, 17, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .form-group {
@@ -408,11 +712,12 @@ a {
 
 .form-group label {
     display: block;
-    font-size: 0.85rem;
-    font-weight: 700;
+    font-size: 0.78rem;
+    font-weight: 800;
     text-transform: uppercase;
     margin-bottom: 8px;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.08em;
+    color: #111111;
 }
 
 .form-group input,
@@ -562,6 +867,18 @@ a {
         flex-direction: column;
         gap: 12px;
     }
+    .portfolio-case-studies .case-study-card {
+        padding: 20px 16px;
+    }
+
+    .portfolio-case-studies .case-study-grid,
+    .portfolio-case-studies .case-screen-grid,
+    .portfolio-case-studies .case-screen-pair,
+    .skills-wrapper,
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
     .case-images {
         grid-template-columns: 1fr;
     }
