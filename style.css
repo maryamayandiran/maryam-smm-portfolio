@@ -1134,21 +1134,38 @@ body {
 }
 
 .tool-circle {
-    width: 116px;
-    height: 54px;
-    padding: 8px 12px;
+    display: grid;
+    place-items: center;
+    width: 142px;
+    height: 76px;
+    padding: 12px;
     border: 1px solid #000000;
     border-radius: 2px;
     background: #ffffff;
     color: #000000;
-    font-size: 0.68rem;
-    letter-spacing: 0.04em;
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.35;
+    text-align: center;
     box-shadow: none;
 }
 
 .tool-circle:hover {
+    transform: translateY(-2px);
+    border-color: #000000;
     background: #000000;
     color: #ffffff;
+}
+
+.reveal-on-scroll .tool-circle {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+    transition: opacity 0.9s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.reveal-on-scroll.visible .tool-circle {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
 }
 
 .portfolio-case-studies {
@@ -1309,6 +1326,12 @@ footer,
 
     .hero-buttons {
         align-items: stretch;
+    }
+
+    .tool-circle {
+        width: 120px;
+        height: 68px;
+        padding: 10px;
     }
 
     .portfolio-case-studies .case-study-card {
